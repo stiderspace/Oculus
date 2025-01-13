@@ -12,7 +12,6 @@
     "ProgramTypeAccessor",
     "MixinBlockStateBehavior",
     "MixinBiome",
-    "MixinChunkRenderDispatcherRebuildTask",
     "MixinClientLanguage",
     "MixinDebugScreenOverlay",
     "MixinTheEndPortalRenderer",

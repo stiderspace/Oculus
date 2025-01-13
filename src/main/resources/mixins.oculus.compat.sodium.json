@@ -45,7 +45,6 @@
     "vertex_format.MixinGlVertexFormatBuilder",
     "vertex_format.MixinRegionChunkRenderer",
     "vertex_format.MixinRenderRegionArenas",
-    "shader_overrides.MixinChunkRenderRebuildTask",
     "vertex_format.MixinRenderSectionManager"
   ]
 }

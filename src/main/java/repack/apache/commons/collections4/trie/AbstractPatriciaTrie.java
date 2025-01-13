@@ -733,7 +733,7 @@ abstract class AbstractPatriciaTrie<K, V> extends AbstractBitwiseTrie<K, V> {
      * This is implemented by going always to the left until
      * we encounter a valid uplink. That uplink is the first key.
      */
-    public TrieEntry<K, V> firstEntry() {
+    TrieEntry<K, V> firstEntry() {
         // if Trie is empty, no first node.
         if (isEmpty()) {
             return null;
@@ -1147,7 +1147,7 @@ abstract class AbstractPatriciaTrie<K, V> extends AbstractBitwiseTrie<K, V> {
      * <p>This is implemented by going always to the right until
      * we encounter a valid uplink. That uplink is the last key.
      */
-    public TrieEntry<K, V> lastEntry() {
+    TrieEntry<K, V> lastEntry() {
         return followRight(root.left);
     }
 

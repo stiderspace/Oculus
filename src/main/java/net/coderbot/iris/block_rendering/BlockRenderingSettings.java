@@ -4,10 +4,8 @@ import it.unimi.dsi.fastutil.objects.Object2IntFunction;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.coderbot.iris.shaderpack.materialmap.NamespacedId;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.ChunkRenderTypeSet;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
@@ -17,7 +15,7 @@ public class BlockRenderingSettings {
 
 	private boolean reloadRequired;
 	private Object2IntMap<BlockState> blockStateIds;
-	private Map<Holder.Reference<Block>, ChunkRenderTypeSet> blockTypeIds;
+	private Map<Block, RenderType> blockTypeIds;
 	private Object2IntFunction<NamespacedId> entityIds;
 	private Object2IntFunction<NamespacedId> itemIds;
 	private float ambientOcclusionLevel;
@@ -55,7 +53,7 @@ public class BlockRenderingSettings {
 	}
 
 	@Nullable
-	public Map<Holder.Reference<Block>, ChunkRenderTypeSet> getBlockTypeIds() {
+	public Map<Block, RenderType> getBlockTypeIds() {
 		return blockTypeIds;
 	}
 
@@ -79,7 +77,7 @@ public class BlockRenderingSettings {
 		this.blockStateIds = blockStateIds;
 	}
 
-	public void setBlockTypeIds(Map<Holder.Reference<Block>, ChunkRenderTypeSet> blockTypeIds) {
+	public void setBlockTypeIds(Map<Block, RenderType> blockTypeIds) {
 		if (this.blockTypeIds != null && this.blockTypeIds.equals(blockTypeIds)) {
 			return;
 		}
